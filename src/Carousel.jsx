@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import NaviButton from "./NaviButton/NaviButton";
 import "./Carousel.css";
 
 let count = 0;
@@ -49,7 +50,6 @@ const Carousel = (props) => {
 
   return (
     <div className="cslContainer">
-      <div className="clsInterface">
         <div className="clsPlayer">
           {data.map((x, index) => (
             <div
@@ -85,8 +85,12 @@ const Carousel = (props) => {
               )}
             </div>
           ))}
+         <NaviButton color="white" direction="right" className="clsPagingRight"/>
+        <NaviButton color="white" direction="left" className="clsPagingLeft"/>       
+        
         </div>
-        <div className="clsButton">
+
+        {/* <div className="clsButton">
           <button
             className="clsPagingLeft"
             onClick={() => {
@@ -133,7 +137,7 @@ const Carousel = (props) => {
               <polyline points="6 17 11 12 6 7" />
             </svg>
           </button>
-        </div>
+        </div> */}
        {showInfoButton && 
        (<div className="clsInfoButton" onClick={() => setShowInfo(true)}>
           <svg
@@ -153,7 +157,6 @@ const Carousel = (props) => {
           </svg>
         </div>)}
       </div>
-    </div>
   );
 };
 export default Carousel;

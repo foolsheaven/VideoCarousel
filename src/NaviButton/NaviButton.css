@@ -1,0 +1,26 @@
+.NaviButton {
+}
+
+.ButtonRight {
+  -moz-transform: rotate(180deg); /* Firefox 3.6 Firefox 4 */
+  -webkit-transform: rotate(180deg); /* Safari */
+  -o-transform: rotate(180deg); /* Opera */
+  -ms-transform: rotate(180deg); /* IE9 */
+  transform: rotate(180deg); /* W3C */
+
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #000000;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+}
+
+.ButtonLeft {
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #000000;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+}
