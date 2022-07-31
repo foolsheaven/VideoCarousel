@@ -19,21 +19,18 @@
 
 .clsPagingLeft {
   /* position: absolute;
-  margin-left: 3%;
-  margin-top: 26%; */
-  position: absolute;
   top: 47%;
   right: 45%;
   width: 100%;
-  height: 100%;
+  height: 100%; */
 }
 
 .clsPagingRight {
-  position: absolute;
-  top: 47%;
+  position: relative;
+  top: 50%;
   left: 45%;
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 100px;
 }
 
 .clsInfoButton {
@@ -50,16 +47,18 @@
 }
 
 .clsInactive {
-  display: none;
+  /* display: none; */
 }
 
 .clsModalInfoBox {
   position: absolute;
-  top: 0px;
+  top: 85%;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(106, 111, 182, 0.6);
+  color: rgb(0, 0, 0);
+  /* background-color: rgba(106, 111, 182, 0.6); */
+  z-index: 100;
 }
 
 .clsModalInfoBox .clsText {
@@ -78,4 +77,122 @@
 
 .clsModalInfoBox .clsText .clsBody {
   font-size: 12px;
+}
+
+/* 
+
+.carousel {
+  position:relative;
+  width:400px;
+  border:10px solid white;
+  margin:20px auto;
+  box-shadow:0px 0px 40px #000;
+}
+
+.carousel > label {
+  position:absolute;
+  top:0;
+  width:25%;
+  height:100%;
+  visibility:hidden;
+}
+
+.carousel-wrapper{
+  height:400px;
+  position:relative;
+  width:800px;
+  margin:0 auto;
+}
+.carousel-item{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:25px 50px;
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+  border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev{
+  left:-30px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%) rotate(135deg);
+}
+ 
+.arrow-next{
+    right:-30px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+  }
+
+.light{
+  color:white;
+}
+
+@media (max-width: 480px) {
+      .arrow, .light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
+ */
+
+
+ .carousel {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  max-height: 768px;
+}
+
+
+.slider video {
+  position: absolute;
+  margin-left: 0px;
+  top: 0px;
+  left: 0px; 
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: .25s;
+  /* vertical-align: top; */
+  visibility: hidden; 
+  overflow: hidden; 
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow:0px 0px 5px #000;
+}
+
+
+
+.slider label {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  border: .1em solid rgb(255, 255, 255);
+  top: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.9em;
+  width: 0.9em;
+  z-index: 99;
+} 
+
+.clsLoading {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  z-index: 100;
 }
