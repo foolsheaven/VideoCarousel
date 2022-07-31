@@ -10,6 +10,8 @@ function App() {
   
   const fetchMoviesHandler = useCallback(async () => {
     try {
+      setMedia([]);
+
       const response = await fetch(GOOGLE_API_READ_ALL_FROM_BUCKET);
       if (!response.ok) {
         throw new Error("Something went wrong!");
@@ -31,11 +33,11 @@ function App() {
 
   useEffect(() => {
     fetchMoviesHandler()
-   }, [fetchMoviesHandler]);
+   }, []);
 
   return (
     <div className="App">
-      <Carousel data={media} intervall={8000} showInfoButton={true}/>
+      <Carousel data={media}/>
     </div>
   )
 }
